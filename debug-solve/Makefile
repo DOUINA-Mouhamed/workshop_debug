@@ -3,6 +3,7 @@ CC = gcc
 SRC = 	main.c			\
 	string.c		\
 	str_to_word_array.c	\
+	sort_and_list.c
 
 OBJ = $(SRC:.c=.o)
 TARGET = test

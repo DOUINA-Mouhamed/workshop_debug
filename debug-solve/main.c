@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*
 int which_flag(char c, char *flags)
 {
     int count;
@@ -47,21 +46,20 @@ struct flags_t find_flag(char **av, linked_list_t **list)
     }
     return flags;
 }
-    */
 
 int main(int ac, char **av)
 {
     char a[] = "test, here, \"long test here\", \"second one\"";
-    // linked_list_t *list = NULL;
-    // struct flags_t my_flags;
+    linked_list_t *list = NULL;
+    struct flags_t my_flags;
 
-    // char *str = my_strstr(av[1], av[2]);
-    // my_put_str(str);
+    char *str = my_strstr(av[1], av[2]);
+    my_put_str(str);
 
-    // print_array(av);
-    // av = sort_array(av);
-    // print_array(av);
-    /**
+    print_array(av);
+    av = sort_array(av);
+    print_array(av);
+
     char **sorted = str_to_word_array(av[1]);
     my_flags = find_flag(av, &list);
     destroy_list(list);
@@ -69,13 +67,11 @@ int main(int ac, char **av)
     list = new_list(av);
     my_sort_list(&list, &strcmp);
     destroy_list(list);
-    */
     
-    char **sorted = str_to_word_array(a);
-    // sorted = sort_array(sorted);
+    sorted = str_to_word_array(a);
+    sorted = sort_array(sorted);
     print_array(sorted);
     destroy_array(sorted);
-    // free(sorted);
 
     return 0;
 }
