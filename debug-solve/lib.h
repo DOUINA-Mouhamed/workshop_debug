@@ -2,8 +2,9 @@
 #define CAPS(x) (x >= 'A' && x <= 'Z')
 #define LOW(x) (x >= 'a' && x <= 'z')
 #define NUM(x) (x >= '0' && x <= '9')
+#define QUOTE(x) (x == '"')
 
-#define ALPHA_NUM(x) (CAPS(x) || LOW(x) || NUM(x))
+#define ALPHA_NUM(x) (CAPS(x) || LOW(x) || NUM(x) || QUOTE(x))
 
 typedef struct linked_list {
     void *data;

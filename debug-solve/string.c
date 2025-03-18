@@ -5,7 +5,7 @@
 
 int my_strlen(char *str)
 {
-    return (*str ? strlen(str + 1) : 1);
+    return 1 + (*str ? my_strlen(str + 1) : 0);
 }
 
 void my_put_str(char *str)
