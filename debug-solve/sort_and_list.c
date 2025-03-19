@@ -95,12 +95,3 @@ char **sort_array(char **array)
     }
     return array;
 }
-
-void print_array(char **array)
-{
-    while (array) {
-        write(1, *array, my_strlen(&array));
-        write(1, "\n", 1);
-        ++array;
-    }
-}
